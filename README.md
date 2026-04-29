@@ -38,3 +38,15 @@ Extensão para o Chrome que detecta automaticamente CNPJs (no formato com másca
 ## Privacidade
 
 Nada é enviado a servidores próprios. A extensão consulta exclusivamente a [BrasilAPI](https://brasilapi.com.br/) e o destino do botão é o site público [cnpjaberto.com](https://cnpjaberto.com/).
+
+## Empacotar para a Chrome Web Store
+
+```bash
+zip -r cnpjaberto-extension.zip . -x "*.git*" "scripts/*" "*.zip" "*.md" "LICENSE"
+```
+
+O arquivo `.zip` resultante pode ser enviado ao [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole).
+
+## Licença
+
+[MIT](LICENSE).

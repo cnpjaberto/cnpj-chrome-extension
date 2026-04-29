@@ -1,8 +1,8 @@
 // Popup: lê os CNPJs detectados pela aba ativa, busca dados básicos
-// na BrasilAPI e expõe ações para abrir no cnpjaberto.com.br e reportar bug.
+// na Minha Receita e expõe ações para abrir no cnpjaberto.com.br e reportar bug.
 
 const CNPJABERTO_URL = "https://cnpjaberto.com.br/cnpj/";
-const BRASILAPI_URL = "https://brasilapi.com.br/api/cnpj/v1/";
+const MINHARECEITA_URL = "https://minhareceita.org/";
 
 const $ = (id) => document.getElementById(id);
 
@@ -47,7 +47,7 @@ async function loadCnpjsForTab(tabId) {
 }
 
 async function fetchCnpjData(digits) {
-  const resp = await fetch(BRASILAPI_URL + digits, { headers: { Accept: "application/json" } });
+  const resp = await fetch(MINHARECEITA_URL + digits, { headers: { Accept: "application/json" } });
   if (!resp.ok) {
     let msg = `HTTP ${resp.status}`;
     try { const j = await resp.json(); if (j && j.message) msg = j.message; } catch (_) {}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CNPJ Aberto</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="hdr">
+      <img src="icons/icon32.png" alt="" class="hdr-logo" />
+      <div class="hdr-text">
+        <div class="hdr-title">CNPJ Aberto</div>
+        <div class="hdr-sub">Detector de CNPJs na página</div>
+      </div>
+    </header>
+
+    <section id="empty" class="state hidden">
+      <div class="emoji" aria-hidden="true">🔍</div>
+      <p>Nenhum CNPJ detectado nesta página.</p>
+      <small>Abra uma página que contenha um CNPJ no formato <code>00.000.000/0000-00</code>.</small>
+    </section>
+
+    <section id="list" class="state hidden">
+      <label for="cnpj-select" class="lbl">CNPJ detectado</label>
+      <select id="cnpj-select"></select>
+      <div id="card" class="card">
+        <div id="loading" class="loading hidden">Carregando dados…</div>
+        <div id="error" class="error hidden"></div>
+        <div id="data" class="data hidden">
+          <div class="row"><span class="k">Razão social</span><span class="v" id="f-razao">—</span></div>
+          <div class="row"><span class="k">Nome fantasia</span><span class="v" id="f-fantasia">—</span></div>
+          <div class="row"><span class="k">CNPJ</span><span class="v mono" id="f-cnpj">—</span></div>
+          <div class="row"><span class="k">Situação</span><span class="v" id="f-situacao">—</span></div>
+          <div class="row"><span class="k">Abertura</span><span class="v" id="f-abertura">—</span></div>
+          <div class="row"><span class="k">Atividade</span><span class="v" id="f-cnae">—</span></div>
+          <div class="row"><span class="k">Município/UF</span><span class="v" id="f-municipio">—</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="actions">
+      <button id="btn-open" class="btn btn-primary" disabled>Ver no cnpjaberto.com</button>
+      <button id="btn-bug" class="btn btn-ghost">Reportar bug</button>
+    </footer>
+
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -7,8 +7,8 @@ Extensão para o Chrome que detecta automaticamente CNPJs (no formato com másca
 - 🔍 **Detecção automática** de CNPJs com máscara em qualquer página.
 - ✅ Validação dos dígitos verificadores (descarta números no formato de CNPJ que não são válidos).
 - 🔔 **Badge** no ícone da extensão com a quantidade de CNPJs encontrados.
-- 📇 **Popup com dados básicos** (razão social, nome fantasia, situação cadastral, data de abertura, CNAE, município/UF) consumidos da API pública [BrasilAPI](https://brasilapi.com.br/).
-- 🌐 Botão **"Ver no cnpjaberto.com"** que redireciona para `https://cnpjaberto.com/cnpj/<id>`.
+- 📇 **Popup com dados básicos** (razão social, nome fantasia, situação cadastral, data de abertura, CNAE, município/UF).
+- 🌐 Botão **"Ver no cnpjaberto.com.br"** que redireciona para `https://cnpjaberto.com.br/cnpj/<id>`.
 - 🐞 Botão **"Reportar bug"** que mostra a confirmação `Obrigado! Feedback recebido`.
 
 ## Instalação (modo desenvolvedor)
@@ -33,11 +33,11 @@ Extensão para o Chrome que detecta automaticamente CNPJs (no formato com másca
 
 - `storage` — guardar CNPJs detectados por aba (`storage.session`).
 - `activeTab`, `tabs` — descobrir a aba ativa para o popup.
-- `host_permissions: https://brasilapi.com.br/*` — chamada à API pública de CNPJ.
+- `host_permissions` — chamada à API pública usada para buscar os dados de CNPJ.
 
 ## Privacidade
 
-Nada é enviado a servidores próprios. A extensão consulta exclusivamente a [BrasilAPI](https://brasilapi.com.br/) e o destino do botão é o site público [cnpjaberto.com](https://cnpjaberto.com/).
+Nada é enviado a servidores próprios. A extensão consulta apenas uma API pública de dados de CNPJ e o destino do botão é o site público [cnpjaberto.com.br](https://cnpjaberto.com.br/).
 
 ## Empacotar para a Chrome Web Store
 

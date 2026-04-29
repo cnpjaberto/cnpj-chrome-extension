@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "CNPJ Aberto - Detector",
   "version": "1.0.0",
-  "description": "Detecta CNPJs em páginas web e mostra dados básicos da empresa via cnpjaberto.com.",
+  "description": "Detecta CNPJs em páginas web e mostra dados básicos da empresa via cnpjaberto.com.br.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",

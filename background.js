@@ -1,7 +1,8 @@
 // Service worker: recebe CNPJs detectados pelo content script,
 // guarda por aba e atualiza o badge do ícone com a quantidade encontrada.
 
-const BADGE_COLOR = "#2E7D32";
+// Cor da marca cnpjaberto.com.br (orange-800)
+const BADGE_COLOR = "#9A3412";
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (!message || message.type !== "CNPJS_FOUND") return;

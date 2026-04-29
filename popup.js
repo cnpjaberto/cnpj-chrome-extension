@@ -1,7 +1,7 @@
 // Popup: lê os CNPJs detectados pela aba ativa, busca dados básicos
-// na BrasilAPI e expõe ações para abrir no cnpjaberto.com e reportar bug.
+// na BrasilAPI e expõe ações para abrir no cnpjaberto.com.br e reportar bug.
 
-const CNPJABERTO_URL = "https://cnpjaberto.com/cnpj/";
+const CNPJABERTO_URL = "https://cnpjaberto.com.br/cnpj/";
 const BRASILAPI_URL = "https://brasilapi.com.br/api/cnpj/v1/";
 
 const $ = (id) => document.getElementById(id);
